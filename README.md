@@ -1,0 +1,2 @@
+# MyMiniApp
+bytedance mini program
