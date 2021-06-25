@@ -1,0 +1,36 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/order/order",
+    "pages/list/list",
+    "pages/person/person"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "悠悠面包房",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "imgs/index.png",
+        "selectedIconPath": "imgs/a-index.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "订单",
+        "iconPath":"imgs/order.png",
+        "selectedIconPath": "imgs/a-order.png"
+      },
+      {
+        "pagePath": "pages/person/person",
+        "text": "我的",
+        "iconPath":"imgs/person.png",
+        "selectedIconPath": "imgs/a-person.png"
+      }
+    ]
+  }
+}

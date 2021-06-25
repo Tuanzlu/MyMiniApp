@@ -6,8 +6,8 @@
         "minified": true,
         "newFeature": true
     },
-    "appid": "testAppId",
-    "projectname": "miniApp",
+    "appid": "tt70990624efa1ab5801",
+    "projectname": "bakeryProgram",
     "condition": {
         "miniprogram": {
             "current": -1
