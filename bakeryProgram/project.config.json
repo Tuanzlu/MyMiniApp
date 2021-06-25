@@ -10,7 +10,36 @@
     "projectname": "bakeryProgram",
     "condition": {
         "miniprogram": {
-            "current": -1
+            "current": 1624624106848,
+            "list": [
+                {
+                    "id": 1624616624934,
+                    "name": "detail",
+                    "pathName": "pages/detail/detail",
+                    "query": "goods_id=1",
+                    "scene": "990001",
+                    "launchFrom": "scan",
+                    "location": "qr_code"
+                },
+                {
+                    "id": 1624620631615,
+                    "name": "person",
+                    "pathName": "pages/person/person",
+                    "query": "",
+                    "scene": "990001",
+                    "launchFrom": "scan",
+                    "location": "qr_code"
+                },
+                {
+                    "id": 1624624106848,
+                    "name": "order",
+                    "pathName": "pages/order/order",
+                    "query": "",
+                    "scene": "990001",
+                    "launchFrom": "scan",
+                    "location": "qr_code"
+                }
+            ]
         }
     }
 }

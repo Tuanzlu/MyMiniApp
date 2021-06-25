@@ -1,0 +1,64 @@
+.detailed-intro {
+    height: 300px;
+    padding: 0 30rpx;
+    margin-top: -45rpx;
+}
+.scroll-view-space {
+    /* border: solid 1px red; */
+    margin-top: 48rpx;
+}
+.detail-title {
+    border-bottom: 1rpx gainsboro solid;
+}
+.img {
+    width: 100%;
+}
+.name {
+    font-size: 18px;
+    margin: 10rpx 0;
+    border-bottom: 1rpx solid ghostwhite;
+}
+.scroll-view_H {
+    white-space: nowrap;
+}
+.price {
+    color: red;
+    font-weight: bold;
+}
+.info {
+    margin-bottom: 20px;
+}
+.btn {
+    display: block;
+    float: right;
+    text-align: center;
+    line-height: 40rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+.sub-info {
+    margin: 30rpx 0;
+}
+.sold-out {
+    display: block;
+    float: right;
+    text-align: center;
+    line-height: 40rpx;
+    font-size: 14px;
+    height: 40rpx;
+}
+.stock {
+    background-color: darksalmon;
+    border-radius: 10rpx;  
+}
+.scroll-view-item_H {
+    display: inline-block;
+    width: 100%;
+}
+.video {
+    width: 100%;
+}
+.bottom-part {
+    height: 500rpx;
+    width: 100%;
+}

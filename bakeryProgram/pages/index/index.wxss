@@ -3,9 +3,9 @@
   text-align: center;
   background-color: whitesmoke;
 }
-.swiper-item{
-  display: block;
-  height: 150px;
+swiper {
+  width: 750rpx;
+  height: 348rpx;
 }
 .img{
   width: 100%;
@@ -34,10 +34,8 @@
   border-bottom: rgb(187, 186, 186) solid 1px;
 }
 .info-place{
-  /* margin:5px 0; */
   border-bottom: rgb(218, 214, 214) solid 1px;
 }
 .info-time{
-  /* margin:5px 0; */
   border-bottom: rgb(218, 214, 214) solid 1px;
 }

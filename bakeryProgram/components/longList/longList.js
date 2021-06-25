@@ -38,7 +38,9 @@ Component({
     defaultStates: {},
   },
   methods: {
-    // Component internal method
+    itemClick(e) {
+      console.log(e);
+    },
     customMethod: function () {},
   },
 });

@@ -1,8 +1,12 @@
 <view class="intro">
     <view>
         <swiper indicator-dots="{{indicatorDots}}"
-        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-        <block tt:for="{{background}}" >
+          autoplay="{{autoplay}}" 
+          interval="{{interval}}" 
+          duration="{{duration}}"
+          circular="{{circular}}"
+        >
+        <block wx:for="{{background}}" >
           <swiper-item>
             <image mode="widthFix" class="img" src="{{item.path}}" />
           </swiper-item>

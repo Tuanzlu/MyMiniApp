@@ -1,5 +1,5 @@
 const app = getApp()
-
+// import {request} from "../../request/index.js"
 Page({
   data: {
     background: [
@@ -22,9 +22,14 @@ Page({
     vertical: false,
     autoplay: true,
     interval: 2000,
-    duration: 500
+    duration: 500,
+    circular: true
   },
   onLoad: function () {
+    // request({url:""})
+    //   .then(res=>{
+    //     console.log(res);
+    //   });
     console.log('Welcome to Mini Code')
   },
 })

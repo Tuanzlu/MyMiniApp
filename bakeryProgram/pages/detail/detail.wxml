@@ -1,0 +1,40 @@
+<view>
+    <view class="card">
+        <view class="scroll-view-space">
+            <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%" scroll-left="{{0}}">
+              <view class="scroll-view-item_H">
+                  <image class="img" mode="aspectFit" src="../../imgs/toast.jpeg"></image>
+              </view>
+              <view class="scroll-view-item_H">
+                <image class="img" mode="aspectFit" src="../../imgs/toast-2.jpeg"></image>
+              </view>
+              <view class="scroll-view-item_H">
+                <image class="img" mode="aspectFit" src="../../imgs/toast-3.jpeg"></image>
+              </view>
+            </scroll-view>
+        </view>   
+    </view>
+    <view class="detailed-intro">
+      <view class="name">{{item.name}}</view>
+      <view class="sub-info">
+        <text class="price" decode>¥{{item.price}}&nbsp;&nbsp;&nbsp;</text>
+        <text class="stock">库存{{item.stock}}</text>
+        <button wx:if="{{item.stock===0}}" class="sold-out">已售尽</button>
+        <button wx:else class="btn">+</button>
+      </view>
+      <view class="detail-part">
+        <view class="detail-title">商品详情</view>
+        <view class="info">{{item.info}}</view>
+      </view>
+      <view class="bottom-part">
+        <video 
+          id="myVideo" 
+          autoplay='true' 
+          class="video" 
+          src="{{video.src}}" 
+          binderror="videoErrorCallback"
+        >
+        </video>
+      </view>
+    </view>
+</view>
