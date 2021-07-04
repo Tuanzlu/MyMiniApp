@@ -1,11 +1,11 @@
 <view class="long-list">
-    <label class="title">商品列表</label>
+    <text class="title">商品列表</text>
     <view class="card" 
     wx:for="{{list}}"
     wx:key="id">
         <view>
             <navigator hover-class="none" url="../../pages/detail/detail?goods_id={{item.id}}">
-                <image class="list-img" src="{{item.img}}" />
+                <image class="list-img" src="{{item.src}}" />
             </navigator>
         </view>
         <view class="card-info">
@@ -14,10 +14,9 @@
                 <view class="bread-info"> {{item.intro}}</view>
             </navigator>
             <view class="bread-price"> ¥{{item.price}}
-                <button wx:if="{{item.stock > 0}}" size="mini" class="mini-btn">+</button>
+                <button wx:if="{{item.stock > 0}}" size="mini" class="mini-btn" bindtap="handleBtnTap">马上抢购</button>
                 <button wx:else size="mini" class="sold-out">已售尽</button>    
-            </view> 
-        
+            </view>   
         </view>
     </view>
 </view>

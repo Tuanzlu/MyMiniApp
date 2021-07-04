@@ -1,0 +1,161 @@
+page {
+    margin: 0;
+    padding-bottom: 120rpx;
+}
+.addr-bar {
+    display: flex;
+    align-content: center;
+    background-color: ghostwhite;
+    height: 250rpx;
+}
+.addr-text {
+    color:rgb(122, 120, 120);
+    font-size: 14px;
+}
+.goods-back {
+    
+    margin: 10rpx 0;
+}
+.goods-list {
+    
+    padding-top: 30rpx;
+    background-color: white;
+    /* border: solid 1px red; */
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+.card-price-info {
+    margin-top: 10rpx;
+    border-top: 1rpx grey solid;
+    display: flex;
+    text-align: center;
+    align-content: center;
+    justify-content: flex-end;
+}
+.card-total-text {
+    font-size: 12px;
+}
+.card-total {
+    color: red;
+}
+.low-part {
+
+    min-height: 200rpx;
+}
+.memo {
+    padding: 20rpx;
+    /* border: solid 1rpx gray; */
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin: 10rpx auto 20rpx auto;
+}
+.memo-text {
+    color: gray;
+}
+.memo-area {
+    width: 100%;
+    border: solid 1rpx gray;
+}
+.btm-tool {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    position: fixed;
+    height: 100rpx;
+    background-color: white;
+    display: flex;
+    border-top: 1rpx rgb(231, 230, 230) solid;
+    justify-content: space-between;
+}
+.detail-info {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 80%;
+    height: 240rpx;
+    border-radius: 3%;
+    background-color: rgba(252, 252, 253, 0.76);
+    /* border: solid 1px red; */
+}
+.user-info {
+    font-size: 18px;
+    margin: 10rpx;
+}
+.addr-btn {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 250rpx;
+    margin: auto;
+}
+.card {
+    background-color: ghostwhite;
+    margin: 10rpx auto;
+    
+    display: flex;
+    flex-direction: row;
+    height: 160rpx;
+    width: 100%;
+}
+.card-img {
+    margin: 20rpx 0 0 30rpx;
+    width: 120rpx;
+    height: 120rpx;
+}
+.card-info {
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    height: 130rpx;
+    margin: auto 30rpx;
+}
+.title {
+    font-size: 16px;
+}
+.num {
+    color: rgb(122, 120, 120);
+    font-size: 12px;
+}
+.price-info {
+    display: flex;
+    justify-content: space-between;
+}
+.btm-bar {
+    background-color: grey;
+}
+.tool-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 24px;
+    width: 100%;
+}
+.price-info {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    /* border: solid blue 1px; */
+}
+.right-shadow {
+    justify-content: center;
+    width: 250rpx;
+    line-height: 90rpx;
+    background-color: gray;
+    color: white;
+    display: flex;
+    font-size:14px;
+    align-items: center;
+    font-weight: bold;
+}
+.total-text {
+    font-size: 14px;
+}
+.total {
+    color: red;
+}

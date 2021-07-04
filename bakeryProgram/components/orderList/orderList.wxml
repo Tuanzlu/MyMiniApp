@@ -1,0 +1,44 @@
+<view class="order-list">
+    <view wx:for="{{orderList}}" wx:key="id" class="order-item">
+        <view class="order-id">订单编号：{{item.orderId}}</view>
+        <navigator hover-stop-propagation="{{true}}" url="{{path+item.orderId}}">
+        <view class="f-line">
+            <image class="img" src="../../imgs/logo.jpeg"></image>
+            <view class="title">
+                <view class="title-name">悠悠Bakery</view>
+                <view class="time">{{item.time}}</view>
+            </view>
+        </view>
+        <view class="order-content">
+            <text wx:if="{{item.goodsList.length > 1}}">{{item.goodsList[0].name}}等{{item.goodsList.length}}件商品</text>
+            <text wx:else>{{item.goodsList[0].name}}</text>
+            <text>¥{{item.total}}</text>
+        </view>
+        </navigator>
+        <view class="func-bar">
+            <button 
+                wx:if="{{tabIndex === 1}}" 
+                size="mini" 
+                class="btn"
+                bindtap="handleTap"
+                data-orderId="{{item.orderId}}"
+            >支付</button>
+            <button 
+                wx:elif="{{tabIndex === 2}}" 
+                size="mini" 
+                class="btn"
+                bindtap="handleTap"
+                data-orderId="{{item.orderId}}"
+            >退单</button>
+            <button 
+                wx:elif="{{tabIndex === 3}}" 
+                size="mini" 
+                class="btn"
+                bindtap="handleTap"
+                data-orderId="{{item.orderId}}"
+            >评价</button>
+        </view>
+       
+    </view>
+
+</view>

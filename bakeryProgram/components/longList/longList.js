@@ -7,39 +7,28 @@ Component({
       type: String,
       value: "default title",
     },
+    pos: {
+      type: Number,
+      value: 0,
+    },
+    list: {
+      type: Array,
+      value: []
+    }
   },
   data: {
-    list: [
-      {
-        "id": 1,
-        "name": "碱水面包",
-        "price": 12,
-        "intro": "好吃的面包",
-        "img": "../../imgs/logo.jpeg",
-        "stock": 0
-      },
-      {
-        "id": 2,
-        "name": "碱水面包",
-        "price": 12,
-        "intro": "好吃的面包",
-        "img": "../../imgs/logo.jpeg",
-        "stock": 1
-      },
-      {
-        "id": 3,
-        "name": "碱水面包",
-        "price": 12,
-        "intro": "好吃的面包",
-        "img": "../../imgs/logo.jpeg",
-        "stock": 0
-      },
-    ],
+    
     defaultStates: {},
   },
   methods: {
     itemClick(e) {
       console.log(e);
+      
+    },
+    handleBtnTap(e) {
+      wx.navigateTo({
+        url: '../../pages/goods/goods' // 指定页面的url
+      });
     },
     customMethod: function () {},
   },

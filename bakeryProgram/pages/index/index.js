@@ -1,5 +1,8 @@
-const app = getApp()
-// import {request} from "../../request/index.js"
+const app = getApp();
+const InspireCloud = require('../../libs/inspirecloud-mp.js');
+const serviceId = 'ttn4el';
+const inspirecloud = new InspireCloud({serviceId});
+import {request} from "../../request/index.js"
 Page({
   data: {
     background: [
@@ -23,13 +26,18 @@ Page({
     autoplay: true,
     interval: 2000,
     duration: 500,
-    circular: true
+    circular: true,
+    list: []
   },
   onLoad: function () {
-    // request({url:""})
-    //   .then(res=>{
-    //     console.log(res);
-    //   });
+    inspirecloud.run('getIndexList').then(data => {
+      this.setData({
+        list: data.goodsList
+      })
+    })
+    .catch(error=> {
+      console.log("err");
+    });
     console.log('Welcome to Mini Code')
   },
 })

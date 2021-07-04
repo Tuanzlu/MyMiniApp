@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "longList": "../../components/longList/longList"
+  },
+  "navigationBarTitleText": "商品列表"
+}

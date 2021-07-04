@@ -1,3 +1,55 @@
-.content {
-    height: 100px;
+page {
+    background-color: rgb(226, 226, 228);
+}
+.info-bar {
+    margin-bottom: 30rpx;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding: 20rpx 30rpx;
+    background-color: gray;
+}
+.avatar {
+    width: 124rpx; 
+    height: 128rpx; 
+    display: block; 
+    overflow: hidden; 
+    border-radius: 50%;
+}
+.username {
+    font-size: 18px;
+    margin: auto 30rpx;
+}
+
+.func-bar {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(250, 245, 245);
+    /* border: solid 1px red; */
+}
+.func-item {
+    background-color:white;
+    /* border: solid 1px red; */
+    margin: 1rpx 0;
+    padding: 0 30rpx;
+    display: flex;
+    flex-direction: row;
+}
+.func-logo {
+    margin: 10rpx;
+    width: 58rpx; 
+    height: 58rpx; 
+    display: block; 
+    overflow: hidden; 
+    /* border-radius: 50%; */
+}
+.func-name {
+    margin: auto 10rpx;
+}
+.question {
+    background-color:white;
+    margin: 30rpx 0;
+    padding: 0 30rpx;
+    display: flex;
+    flex-direction: row;
 }

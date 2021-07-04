@@ -1,21 +1,14 @@
 <tabs tabs="{{tabs}}" binditemChange="handleItemChange">
     <block wx:if="{{tabs[0].isActive}}">
-        <view class="order-list">
-            <navigator>
-                <view wx:for="{{orderList}}" wx:key="id" class="order-item">
-                    <view class="order-id">订单编号：{{item.orderId}}</view>
-                    <view class="f-line">
-                        <image class="img" src="../../imgs/logo.jpeg"></image>
-                        <view class="title">
-                            <view class="title-name">悠悠Bakery</view>
-                            <view class="time">{{item.time}}</view>
-                        </view>
-                        
-                    </view>
-                </view>
-            </navigator>
-        </view>
+        <orderList wx:if="{{unpayOrderList.length>0}}" orderList="{{unpayOrderList}}" tabIndex="{{1}}"></orderList>
+        <text wx:else class="no-list">暂无订单</text>
     </block>
-    <block wx:elif="{{tabs[1].isActive}}">2</block>
-    <block wx:elif="{{tabs[2].isActive}}">3</block>
+    <block wx:elif="{{tabs[1].isActive}}">
+        <orderList wx:if="{{payOrderList.length>0}}" orderList="{{payOrderList}}" tabIndex="{{2}}"></orderList>
+        <text wx:else class="no-list">暂无订单</text>
+    </block>
+    <block wx:elif="{{tabs[2].isActive}}">
+        <orderList wx:if="{{finishOrderList.length>0}}" orderList="{{finishOrderList}}" tabIndex="{{3}}"></orderList>
+        <text wx:else class="no-list">暂无订单</text>
+    </block>
 </tabs>

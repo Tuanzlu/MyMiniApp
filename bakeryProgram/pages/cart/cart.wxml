@@ -1,0 +1,63 @@
+<view class="addr-bar">
+    <button wx:if="{{userAddr.length===0}}" bindtap="handleAddr" class="addr-btn" size="mini" >获取地址</button>
+    <view wx:else class="detail-info">
+        <view class="addr-text">收货地址:</view>
+        <view class="user-info">
+            <text decode>{{userAddr.userName}} &nbsp;</text>
+            <text>{{userAddr.telNumber}}</text>
+        </view>
+        <view>
+            <text>{{userAddr.provinceName}},</text>
+            <text wx:if="{{ishide}}">{{userAddr.cityName}},</text>
+            <text>{{userAddr.countyName}},</text>
+            <text>{{userAddr.detailInfo}}</text>
+        </view>
+    </view>
+</view>
+<view class="goods-back">
+    <view class="goods-list">
+        <text class="memo-text">订单详情：</text>
+        <view class="card" wx:for="{{goodsList}}" wx:key="id">
+                <image class="card-img" src="{{item.src}}"/>
+                <view class="card-info">
+                    <view class="title">{{item.name}}</view>
+                    <view class="price-info">
+                        <text class="num">×{{item.num}}</text>
+                        <text>¥{{item.total}}</text>
+                    </view>
+                </view>
+        </view>
+        <view class="card-price-info">
+            <text class="card-total-text">合计</text>
+            <text decode class="card-total">&nbsp;¥{{total}} &nbsp;</text>
+        </view>
+    </view>
+</view>
+<view class="low-part">
+    <view class="memo">
+        <text wx:if="{{mode===0||mode===1}}" class="memo-text">备注:</text>
+        <text wx:elif="{{mode===2}}" class="memo-text">评价:</text>
+        <textarea
+            wx:if="{{mode===0 || mode===2}}"
+            style="height: 5em"
+            class="memo-area"
+            bindinput="handleInput"
+            placeholder="请输入内容"
+        />
+        <text class="memo-area" wx:if="{{mode===1}}">{{inputValue}}</text>
+    </view>
+</view>
+<view class="btm-tool" wx:if="{{mode===0||mode===1}}">
+    <view class="tool-item">
+        <view class="price-info">
+            <text class="total-text">合计</text>
+            <text decode class="total">&nbsp;¥{{total}} &nbsp;</text>
+        </view>
+        <view wx:if="{{mode === 0}}" bindtap="handlePay"  class="right-shadow">
+            支付
+        </view>
+        <view wx:elif="{{mode === 1}}"  bindtap="handlePay" class="right-shadow">
+                退单
+        </view>
+    </view>
+</view>

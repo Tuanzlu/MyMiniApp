@@ -1,21 +1,55 @@
+import { request } from "../../request";
+const InspireCloud = require('../../libs/inspirecloud-mp.js');
+const serviceId = 'ttn4el';
+const inspirecloud = new InspireCloud({serviceId});
 // /Users/bytedance/Documents/bakeryProgram/bakeryProgram/pages/detail/detail
 Page({
   data: {
-    item:{
-      name: "牛奶吐司",
-      price: 25,
-      stock: 0,
-      info: "用带盖烤听烤出的面包经切片后呈正方形，夹入火腿或蔬菜后即为三明治。用不带盖烤听烤出的面包为长方圆顶形，类似长方形大面包。"
-    },
-    video:{
-      src: "http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400"
-    }
+    item:{},
   },
   videoErrorCallback: function(e) {
     console.log(e.detail.errMsg)
   },
+  handleCartAdd(e) {
+    let goods = e.currentTarget.dataset.goods;
+    let cart = wx.getStorageSync('cart') ||[];
+    let index = cart.findIndex( v=>(v.id===goods.id&&v.name===goods.name));
+    let total = this.data.total+goods.price;
+      this.setData({
+        total: total
+      });
+    if(index===-1){
+      goods.num = 1;
+      cart.push(goods);
+    }else {
+      cart[index].num++;
+    }
+    wx.setStorageSync('cart', cart);
+    console.log(cart);
+    wx.showToast({
+      title: '加入成功', // 内容
+      icon: 'success',
+      mask: true
+    });
+  },
   onLoad: function (options) {
     const {goods_id} = options;
+    inspirecloud.run('getGoodsDetail',{id: goods_id}).then(data=>{
+      console.log(data);
+      this.setData({
+        item: data.goodsItem
+      });
+    })
+    .catch(error=> {
+      console.log("err");
+    });
+    // request({url:"https://cloudapi.bytedance.net/faas/services/ttn4el/invoke/getGoodsDetail", params})
+    //   .then(res=>{
+    //     console.log(res);
+    //     this.setData({
+    //       item: res.data.goodsItem
+    //     })
+    //   });
     console.log(goods_id);
   }
 })

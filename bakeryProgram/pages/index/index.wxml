@@ -22,5 +22,5 @@
   <view class="info-time">营业时间: {{time}}</view>
   <view class="info-place">营业地点: {{position}}</view>
 </view>
-<longList></longList>
+<longList list="{{list}}" pos="{{0}}"></longList>
 </view>

@@ -1,0 +1,50 @@
+<view>
+    <view class="info">
+        <image class="logo" src="../../imgs/logo.jpeg"/>
+        <text class="name">悠悠Bakery</text>
+    </view>
+    <view class="list">
+        <view class="classifier">
+            <view wx:for="{{classes}}" wx:key="id" class="class-item {{activeClass === item.id? 'activeClass':''}}" bindtap="handleClass" data-active="{{item.id}}">{{item.name}}</view>
+        </view>
+        <view class="long-list">
+            <text class="title">商品列表</text>
+            <view class="card" 
+                wx:for="{{list}}"
+                wx:key="id"
+            >
+                <view>
+                    <navigator hover-class="none" url="../../pages/detail/detail?goods_id={{item.id}}">
+                        <image class="list-img" src="{{item.src}}" />
+                    </navigator>
+                </view>
+                <view class="card-info">
+                    <navigator hover-class="none" url="../../pages/detail/detail?goods_id={{item.id}}">
+                        <view class="bread-name">
+                            <text>{{item.name}}</text>  
+                            <!-- <text class="stock">库存{{item.stock}}</text>   -->
+                        </view>
+                        <view class="bread-info"> {{item.intro}}</view>
+                    </navigator>
+                    <view class="bread-price"> 
+                        <text>¥{{item.price}}</text>
+                        <button wx:if="{{item.stock > 0 }}" size="mini" class="mini-btn" bindtap="handleCartAdd" data-goods="{{item}}" data-index="{{index}}">+</button>
+                        <button wx:if="{{item.stock > 0 }}" size="mini" class="mini-btn" bindtap="handleCartMinus" data-goods="{{item}}" data-index="{{index}}">-</button>
+                        <button wx:else size="mini" class="sold-out">已售尽</button>     
+                    </view>   
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="btm-tool">
+        <view class="tool-item">
+        <view bindtap="handleCart" class="iconfont icon-gouwuche02"></view>
+        </view>
+        <view class="price-info">
+        <text>¥{{total}}</text>
+        </view>
+        <view bindtap="handleCart" class="right-shadow">
+            去结算
+        </view>
+    </view>
+</view>

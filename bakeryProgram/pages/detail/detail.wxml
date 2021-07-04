@@ -20,7 +20,7 @@
         <text class="price" decode>¥{{item.price}}&nbsp;&nbsp;&nbsp;</text>
         <text class="stock">库存{{item.stock}}</text>
         <button wx:if="{{item.stock===0}}" class="sold-out">已售尽</button>
-        <button wx:else class="btn">+</button>
+        <button wx:else class="btn" bindtap="handleCartAdd" data-goods="{{item}}">+</button>
       </view>
       <view class="detail-part">
         <view class="detail-title">商品详情</view>
@@ -31,10 +31,11 @@
           id="myVideo" 
           autoplay='true' 
           class="video" 
-          src="{{video.src}}" 
+          src="{{item.videoSrc}}" 
           binderror="videoErrorCallback"
         >
         </video>
       </view>
     </view>
+    
 </view>

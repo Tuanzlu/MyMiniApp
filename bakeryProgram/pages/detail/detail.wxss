@@ -29,12 +29,10 @@
     margin-bottom: 20px;
 }
 .btn {
+    line-height: 40rpx;
     display: block;
     float: right;
     text-align: center;
-    line-height: 40rpx;
-    width: 40rpx;
-    height: 40rpx;
 }
 .sub-info {
     margin: 30rpx 0;

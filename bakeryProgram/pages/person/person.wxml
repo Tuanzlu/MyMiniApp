@@ -1,4 +1,18 @@
 <view class="content">
-  <text>个人中心</text>
-  
+  <view class="info-bar">
+    <image class="avatar" src="{{userInfo.avatarUrl}}"/>
+    <view class="username">
+      {{userInfo.nickName}}
+    </view>
+  </view>
+  <view class="func-bar">
+    <view wx:for="{{funcList}}" wx:key="id" class="func-item">
+      <image src="{{item.src}}" class="func-logo" />
+      <text class="func-name">{{item.funcName}}</text>
+    </view>
+  </view>
+  <view class="question">
+    <image class="func-logo" src="../../imgs/ques.png"/>
+    <text class="func-name">客服中心</text>
+  </view>
 </view>
